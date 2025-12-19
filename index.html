@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Finder</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #0f0f1a;   /* Dark navy background */
+        color: #e0e0e0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .wrapper {
+        max-width: 600px;
+        margin: 60px auto;
+        padding: 20px;
+        background-color: #16162b;  /* Card background */
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+
+    h1 {
+        text-align: center;
+        color: #facc15;  /* Soft yellow title */
+    }
+
+    .search-box {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    input {
+        flex: 1;
+        padding: 10px;
+        font-size: 16px;
+        background-color: #0b0b17;
+        border: 1px solid #2e2e5a;
+        border-radius: 5px;
+        color: #ffffff;
+        outline: none;
+    }
+
+    input::placeholder {
+        color: #9ca3af;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #7c3aed; /* Purple button */
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+        background-color: #5b21b6;
+        transform: translateY(-2px);
+    }
+
+    .movie-card {
+        margin-top: 25px;
+        padding: 15px;
+        background-color: #0b0b17;
+        border-radius: 8px;
+        display: none;
+    }
+
+    .movie-card img {
+        max-width: 180px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .details p {
+        margin: 6px 0;
+        line-height: 1.5;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="wrapper">
+    <h1>🎥 Movie Finder</h1>
+
+    <div class="search-box">
+        <input type="text" id="inputText" placeholder="Type movie name...">
+        <button id="searchButton">Find</button>
+    </div>
+
+    <div class="movie-card" id="movieCard">
+        <img id="poster" alt="Poster">
+        <div class="details" id="movieDetails"></div>
+    </div>
+</div>
+
+<script src="Search.js"></script>
+</body>
+</html>
+
